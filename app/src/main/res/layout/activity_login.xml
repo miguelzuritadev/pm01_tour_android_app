@@ -4,7 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8FC"
     android:padding="20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_10_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_90_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
 
     <TextView
         android:id="@+id/login_title"
@@ -19,15 +34,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:scaleType="centerInside"
         android:src="@drawable/login_cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_title"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_90_percent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_10_percent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title" />
 
 
     <TextView
@@ -48,10 +62,9 @@
         android:background="@drawable/your_rounded_button"
         android:hint="Ingrese su usuario"
         android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_text"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_90_percent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_10_percent"
+        app:layout_constraintTop_toBottomOf="@+id/username_text" />
 
     <TextView
         android:id="@+id/password_text"
@@ -72,10 +85,9 @@
         android:hint="Ingrese su contraseña"
         android:inputType="textPassword"
         android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_text"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_90_percent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_10_percent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text" />
 
     <Button
         android:id="@+id/button2"
@@ -86,11 +98,9 @@
         android:padding="8dp"
         android:text="LOGIN"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        app:layout_constraintWidth_default="wrap"
-        app:layout_constraintWidth_min="0dp"
-        app:layout_constraintWidth_percent="0.8" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
