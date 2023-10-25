@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp">
@@ -22,54 +23,45 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:src="@drawable/login_cover"
-        app:layout_constraintBottom_toTopOf="@+id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_title"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign in and save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/username_text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Track prices, organize travel plans and access member-only deals"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_chainStyle="packed" />
-
+        android:layout_marginTop="10dp"
+        android:text="Username:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText1"
+        app:layout_constraintStart_toStartOf="@+id/editText1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:background="@drawable/your_rounded_button"
         android:hint="Ingrese su usuario"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_default="wrap"
-        app:layout_constraintHeight_min="0dp"
-        app:layout_constraintHeight_percent="0.0"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintWidth_default="wrap"
-        app:layout_constraintWidth_min="0dp"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/username_text"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
     <EditText
         android:id="@+id/editText2"
@@ -81,14 +73,9 @@
         android:inputType="textPassword"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_default="wrap"
-        app:layout_constraintHeight_min="0dp"
-        app:layout_constraintHeight_percent="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1"
-        app:layout_constraintWidth_default="wrap"
-        app:layout_constraintWidth_min="0dp"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/password_text"
+        app:layout_constraintWidth_percent="0.9" />
 
     <Button
         android:id="@+id/button2"
